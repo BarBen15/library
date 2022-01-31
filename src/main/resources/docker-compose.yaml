@@ -1,0 +1,13 @@
+version: '3'
+services:
+  backenddb:
+    image: mysql:latest
+    container_name: library-mysql-db
+    ##init: true
+    restart: always
+    environment:
+      - "MYSQL_ROOT_USERNAME=root"
+      - "MYSQL_ROOT_PASSWORD=root"
+      - "MYSQL_DATABASE=librarydb"
+    ports:
+      - 3306:3306
